@@ -12,7 +12,10 @@
     <img src="https://img.shields.io/github/stars/aawhan0/JevRev?style=flat-square" alt="GitHub stars" />
   </a>
   <a href="https://github.com/aawhan0/JevRev">
-    <img src="https://img.shields.io/github/last-commit/aawhan0/JevRev?style=flat-square" alt="Last commit" />
+    <img src="https://img.shields.io/github/last-commit/aawhan0/JevRev?style=flat-square" alt="GitHub last commit" />
+  </a>
+  <a href="https://medium.com/@vyasaawhan/i-gave-jev-one-job-choose-the-right-ai-model-06f91ef9896d">
+    <img src="https://img.shields.io/badge/Medium-Read%20the%20Article-000000?style=flat-square&logo=medium&logoColor=white" alt="Medium article" />
   </a>
   <img src="https://img.shields.io/github/license/aawhan0/JevRev?style=flat-square" alt="MIT License" />
 </p>
