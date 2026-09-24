@@ -9,6 +9,7 @@ from providers import OpenAICompatibleProvider
 from router import KeywordRouter
 
 DATA = Path("benchmarks/queries.jsonl")
+RESULTS_DIR = Path("benchmarks/results")
 
 
 def load_queries():
@@ -41,29 +42,118 @@ def build_llm_provider(model: str):
 
 
 def run_jev(rows):
+    import urllib.error
+
     client = JevClient()
     router = JevRouter(client)
     price = _float_env("JEV_INPUT_PRICE_PER_MTOK", 0.0)
-    results = []
 
-    for row in rows:
-        started = time.perf_counter()
-        decision = router.decide(row["query"])
-        latency_ms = (time.perf_counter() - started) * 1000
-        input_tokens = int(decision.usage.get("input_tokens", 0))
-        cost_usd = input_tokens / 1_000_000 * price
-        results.append(
-            {
-                "id": row["id"],
-                "expected": row["expected"],
-                "route": decision.route,
-                "confidence": decision.confidence,
-                "latency_ms": latency_ms,
-                "cost_usd": cost_usd,
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    result_path = RESULTS_DIR / "jev.json"
+
+    existing = {}
+
+    if result_path.exists():
+        try:
+            saved = json.loads(result_path.read_text())
+            existing = {
+                item["id"]: item
+                for item in saved.get("results", [])
+                if "id" in item
             }
-        )
-    return results
+            print(f"[Jev] Resuming with {len(existing)} saved results.")
+        except (json.JSONDecodeError, KeyError, TypeError):
+            print("[Jev] Existing results file is invalid; starting fresh.")
 
+    results = list(existing.values())
+
+    for index, row in enumerate(rows, start=1):
+        if row["id"] in existing:
+            print(
+                f"[Jev] {index}/{len(rows)} "
+                f"{row['id']} -> already saved"
+            )
+            continue
+
+        max_retries = 6
+        decision = None
+        latency_ms = None
+
+        for attempt in range(max_retries):
+            try:
+                started = time.perf_counter()
+                decision = router.decide(row["query"])
+                latency_ms = (time.perf_counter() - started) * 1000
+                break
+
+            except urllib.error.HTTPError as exc:
+                if exc.code != 429 or attempt == max_retries - 1:
+                    raise
+
+                wait_seconds = 5 * (2 ** attempt)
+
+                print(
+                    f"[Jev] 429 on {row['id']} "
+                    f"(attempt {attempt + 1}/{max_retries}), "
+                    f"waiting {wait_seconds}s..."
+                )
+
+                time.sleep(wait_seconds)
+
+        input_tokens = int(
+            decision.usage.get(
+                "inputTokens",
+                decision.usage.get("input_tokens", 0),
+            )
+        )
+
+        cost_usd = input_tokens / 1_000_000 * price
+
+        result = {
+            "id": row["id"],
+            "expected": row["expected"],
+            "route": decision.route,
+            "confidence": decision.confidence,
+            "probabilities": decision.probabilities,
+            "latency_ms": latency_ms,
+            "input_tokens": input_tokens,
+            "output_tokens": int(
+                decision.usage.get(
+                    "outputTokens",
+                    decision.usage.get("output_tokens", 0),
+                )
+            ),
+            "cost_usd": cost_usd,
+        }
+
+        results.append(result)
+        existing[row["id"]] = result
+
+        partial_summary = summarize("jev", results)
+
+        result_path.write_text(
+            json.dumps(
+                {
+                    "strategy": "jev",
+                    "dataset": str(DATA),
+                    "results": results,
+                    "summary": partial_summary,
+                },
+                indent=2,
+            )
+        )
+
+        print(
+            f"[Jev] {index}/{len(rows)} "
+            f"{row['id']} -> {decision.route} "
+            f"confidence={decision.confidence:.2f} "
+            f"({latency_ms:.0f} ms)"
+        )
+
+        if index < len(rows):
+            time.sleep(3)
+
+    return results
 
 def run_keyword(rows):
     router = KeywordRouter()

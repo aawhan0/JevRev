@@ -1,0 +1,715 @@
+{
+  "strategy": "jev",
+  "dataset": "benchmarks\\queries.jsonl",
+  "results": [
+    {
+      "id": "q001",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "large": 0.0,
+        "small": 1.0
+      },
+      "latency_ms": 2527.910699995118,
+      "input_tokens": 334,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q002",
+      "expected": "large",
+      "route": "small",
+      "confidence": 0.56,
+      "probabilities": {
+        "small": 0.78,
+        "large": 0.22
+      },
+      "latency_ms": 1599.0759000123944,
+      "input_tokens": 339,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q003",
+      "expected": "small",
+      "route": "small",
+      "confidence": 0.98,
+      "probabilities": {
+        "small": 0.99,
+        "large": 0.01
+      },
+      "latency_ms": 576.2866000004578,
+      "input_tokens": 337,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q004",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.99,
+      "probabilities": {
+        "small": 0.0,
+        "large": 1.0
+      },
+      "latency_ms": 518.7106000084896,
+      "input_tokens": 336,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q005",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 912.2377000021515,
+      "input_tokens": 334,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q006",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 811.3124999945285,
+      "input_tokens": 337,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q007",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.99,
+      "probabilities": {
+        "small": 0.01,
+        "large": 0.99
+      },
+      "latency_ms": 885.5638999957591,
+      "input_tokens": 339,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q008",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 940.5982000025688,
+      "input_tokens": 334,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q009",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.21,
+      "probabilities": {
+        "small": 0.4,
+        "large": 0.6
+      },
+      "latency_ms": 669.9052000039956,
+      "input_tokens": 339,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q010",
+      "expected": "small",
+      "route": "small",
+      "confidence": 0.98,
+      "probabilities": {
+        "large": 0.01,
+        "small": 0.99
+      },
+      "latency_ms": 739.219499999308,
+      "input_tokens": 334,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q011",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 570.1192999986233,
+      "input_tokens": 335,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q012",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.71,
+      "probabilities": {
+        "small": 0.14,
+        "large": 0.86
+      },
+      "latency_ms": 511.95539999753237,
+      "input_tokens": 339,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q013",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "large": 0.0,
+        "small": 1.0
+      },
+      "latency_ms": 1289.4121999997878,
+      "input_tokens": 334,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q014",
+      "expected": "large",
+      "route": "small",
+      "confidence": 0.68,
+      "probabilities": {
+        "small": 0.84,
+        "large": 0.16
+      },
+      "latency_ms": 633.520999996108,
+      "input_tokens": 338,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q015",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 712.1225000009872,
+      "input_tokens": 334,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q016",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 764.8889000120107,
+      "input_tokens": 335,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q017",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.99,
+      "probabilities": {
+        "small": 0.0,
+        "large": 1.0
+      },
+      "latency_ms": 1173.492999994778,
+      "input_tokens": 340,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q018",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "large": 0.0,
+        "small": 1.0
+      },
+      "latency_ms": 539.6834999992279,
+      "input_tokens": 335,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q019",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.76,
+      "probabilities": {
+        "small": 0.12,
+        "large": 0.88
+      },
+      "latency_ms": 527.7635999955237,
+      "input_tokens": 338,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q020",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 1146.8824000039604,
+      "input_tokens": 334,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q021",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 1566.5855999977794,
+      "input_tokens": 336,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q022",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.97,
+      "probabilities": {
+        "small": 0.02,
+        "large": 0.98
+      },
+      "latency_ms": 625.6550999969477,
+      "input_tokens": 341,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q023",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 738.552199996775,
+      "input_tokens": 334,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q024",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.8,
+      "probabilities": {
+        "small": 0.1,
+        "large": 0.9
+      },
+      "latency_ms": 1009.0861000062432,
+      "input_tokens": 341,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q025",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 960.7911000057356,
+      "input_tokens": 335,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q026",
+      "expected": "small",
+      "route": "small",
+      "confidence": 0.99,
+      "probabilities": {
+        "small": 0.99,
+        "large": 0.01
+      },
+      "latency_ms": 2027.5933999946574,
+      "input_tokens": 333,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q027",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.98,
+      "probabilities": {
+        "large": 0.99,
+        "small": 0.01
+      },
+      "latency_ms": 884.4389000005322,
+      "input_tokens": 342,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q028",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "large": 0.0,
+        "small": 1.0
+      },
+      "latency_ms": 614.2437999951653,
+      "input_tokens": 334,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q029",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.98,
+      "probabilities": {
+        "small": 0.01,
+        "large": 0.99
+      },
+      "latency_ms": 695.4048999905353,
+      "input_tokens": 341,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q030",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 680.7380000100238,
+      "input_tokens": 338,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q031",
+      "expected": "small",
+      "route": "small",
+      "confidence": 0.97,
+      "probabilities": {
+        "large": 0.02,
+        "small": 0.98
+      },
+      "latency_ms": 916.3797999935923,
+      "input_tokens": 334,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q032",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.99,
+      "probabilities": {
+        "large": 1.0,
+        "small": 0.0
+      },
+      "latency_ms": 2171.9136999890907,
+      "input_tokens": 344,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q033",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 1125.9091000101762,
+      "input_tokens": 339,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q034",
+      "expected": "large",
+      "route": "small",
+      "confidence": 0.59,
+      "probabilities": {
+        "small": 0.8,
+        "large": 0.2
+      },
+      "latency_ms": 466.13640000578016,
+      "input_tokens": 342,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q035",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 1092.0957000053022,
+      "input_tokens": 334,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q036",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.91,
+      "probabilities": {
+        "small": 0.05,
+        "large": 0.95
+      },
+      "latency_ms": 1545.7257000089157,
+      "input_tokens": 340,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q037",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 1070.5650000018068,
+      "input_tokens": 334,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q038",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.27,
+      "probabilities": {
+        "large": 0.64,
+        "small": 0.36
+      },
+      "latency_ms": 842.5095999991754,
+      "input_tokens": 341,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q039",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 3504.1766999929678,
+      "input_tokens": 333,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q040",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.83,
+      "probabilities": {
+        "small": 0.09,
+        "large": 0.91
+      },
+      "latency_ms": 412.55789999559056,
+      "input_tokens": 339,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q041",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 452.35870000033174,
+      "input_tokens": 332,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q042",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.98,
+      "probabilities": {
+        "small": 0.01,
+        "large": 0.99
+      },
+      "latency_ms": 586.1368000041693,
+      "input_tokens": 338,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q043",
+      "expected": "small",
+      "route": "small",
+      "confidence": 0.96,
+      "probabilities": {
+        "small": 0.98,
+        "large": 0.02
+      },
+      "latency_ms": 397.3665999947116,
+      "input_tokens": 335,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q044",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.77,
+      "probabilities": {
+        "large": 0.88,
+        "small": 0.12
+      },
+      "latency_ms": 403.5323999996763,
+      "input_tokens": 340,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q045",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "large": 0.0,
+        "small": 1.0
+      },
+      "latency_ms": 481.1466999963159,
+      "input_tokens": 333,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q046",
+      "expected": "large",
+      "route": "large",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 0.0,
+        "large": 1.0
+      },
+      "latency_ms": 445.7054000085918,
+      "input_tokens": 344,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q047",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "large": 0.0,
+        "small": 1.0
+      },
+      "latency_ms": 539.0340000012657,
+      "input_tokens": 334,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q048",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.93,
+      "probabilities": {
+        "large": 0.97,
+        "small": 0.03
+      },
+      "latency_ms": 837.698300005286,
+      "input_tokens": 341,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q049",
+      "expected": "small",
+      "route": "small",
+      "confidence": 1.0,
+      "probabilities": {
+        "small": 1.0,
+        "large": 0.0
+      },
+      "latency_ms": 484.39800000051036,
+      "input_tokens": 336,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "q050",
+      "expected": "large",
+      "route": "large",
+      "confidence": 0.79,
+      "probabilities": {
+        "small": 0.11,
+        "large": 0.89
+      },
+      "latency_ms": 404.7926999919582,
+      "input_tokens": 345,
+      "output_tokens": 31,
+      "cost_usd": 0.0
+    }
+  ],
+  "summary": {
+    "strategy": "jev",
+    "dataset": "benchmarks\\queries.jsonl",
+    "total_queries": 50,
+    "route_accuracy": 0.94,
+    "mean_latency_ms": 920.6778180002584,
+    "total_cost_usd": 0.0,
+    "large_calls": 19
+  }
+}
