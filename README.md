@@ -17,7 +17,9 @@
   <a href="https://medium.com/@vyasaawhan/i-gave-jev-one-job-choose-the-right-ai-model-06f91ef9896d">
     <img src="https://img.shields.io/badge/Medium-Read%20the%20Article-000000?style=flat-square&logo=medium&logoColor=white" alt="Medium article" />
   </a>
-  <img src="https://img.shields.io/github/license/aawhan0/JevRev?style=flat-square" alt="MIT License" />
+  <a href="https://github.com/aawhan0/JevRev/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/aawhan0/JevRev?style=flat-square" alt="MIT License" />
+  </a>
 </p>
 
 JevRev is a small research project for benchmarking **Jev-based AI routing** against deterministic and LLM-based approaches.
