@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/badge/Medium-Read%20the%20Article-000000?style=flat-square&logo=medium&logoColor=white" alt="Medium article" />
   </a>
   <a href="https://github.com/aawhan0/JevRev/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/aawhan0/JevRev?style=flat-square" alt="MIT License" />
+    <img src="https://img.shields.io/badge/license-MIT-2ea44f?style=flat-square" alt="MIT License" />
   </a>
 </p>
 
