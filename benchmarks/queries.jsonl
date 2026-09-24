@@ -3,3 +3,48 @@
 {"id":"q003","query":"My login is not working. What should I check?","expected":"small"}
 {"id":"q004","query":"How would you design a reliable distributed job scheduler?","expected":"large"}
 {"id":"q005","query":"Where can I update my account email?","expected":"small"}
+{"id":"q006","query":"What is the difference between a Python list and tuple?","expected":"small"}
+{"id":"q007","query":"Design a multi-region system that remains available during a regional outage.","expected":"large"}
+{"id":"q008","query":"How do I change my notification preferences?","expected":"small"}
+{"id":"q009","query":"Explain how to partition a high-volume Kafka workload across consumers.","expected":"large"}
+{"id":"q010","query":"How can I download my account data?","expected":"small"}
+{"id":"q011","query":"What does HTTP 404 mean?","expected":"small"}
+{"id":"q012","query":"Design an idempotent payment processing service for duplicate requests.","expected":"large"}
+{"id":"q013","query":"How do I update my profile picture?","expected":"small"}
+{"id":"q014","query":"Compare optimistic and pessimistic locking for a distributed database.","expected":"large"}
+{"id":"q015","query":"Where can I see my recent invoices?","expected":"small"}
+{"id":"q016","query":"How do I remove a saved payment method?","expected":"small"}
+{"id":"q017","query":"How would you design a rate limiter for millions of requests per second?","expected":"large"}
+{"id":"q018","query":"What is a primary key in a database?","expected":"small"}
+{"id":"q019","query":"How should a service recover after a partially completed distributed transaction?","expected":"large"}
+{"id":"q020","query":"How do I unsubscribe from marketing emails?","expected":"small"}
+{"id":"q021","query":"What is the purpose of a Python virtual environment?","expected":"small"}
+{"id":"q022","query":"Design a cache invalidation strategy for frequently changing data across regions.","expected":"large"}
+{"id":"q023","query":"How can I change my timezone setting?","expected":"small"}
+{"id":"q024","query":"Explain how you would diagnose intermittent latency spikes across microservices.","expected":"large"}
+{"id":"q025","query":"What is the difference between GET and POST?","expected":"small"}
+{"id":"q026","query":"How do I close my account?","expected":"small"}
+{"id":"q027","query":"Design a fault-tolerant queue processing system with retries and dead-letter handling.","expected":"large"}
+{"id":"q028","query":"How can I update my shipping address?","expected":"small"}
+{"id":"q029","query":"How would you choose a database architecture for a globally distributed write-heavy application?","expected":"large"}
+{"id":"q030","query":"What does a 500 server error usually indicate?","expected":"small"}
+{"id":"q031","query":"How do I enable two-factor authentication?","expected":"small"}
+{"id":"q032","query":"Design an observability strategy for tracing a request across twenty microservices.","expected":"large"}
+{"id":"q033","query":"What is the difference between a set and a dictionary in Python?","expected":"small"}
+{"id":"q034","query":"How would you prevent a thundering-herd problem after a cache miss?","expected":"large"}
+{"id":"q035","query":"Where can I find my API usage?","expected":"small"}
+{"id":"q036","query":"Design a deployment strategy that allows zero-downtime schema migrations.","expected":"large"}
+{"id":"q037","query":"How do I change my display name?","expected":"small"}
+{"id":"q038","query":"Compare horizontal and vertical database sharding approaches for a large tenant base.","expected":"large"}
+{"id":"q039","query":"How can I request a refund?","expected":"small"}
+{"id":"q040","query":"How would you design backpressure for a streaming data pipeline?","expected":"large"}
+{"id":"q041","query":"What is a foreign key?","expected":"small"}
+{"id":"q042","query":"Design an authentication architecture for multiple applications sharing one identity system.","expected":"large"}
+{"id":"q043","query":"How do I sign out of all devices?","expected":"small"}
+{"id":"q044","query":"How would you investigate a memory leak in a long-running production service?","expected":"large"}
+{"id":"q045","query":"Can I change my account language?","expected":"small"}
+{"id":"q046","query":"Design a notification system that supports retries, deduplication, and millions of users.","expected":"large"}
+{"id":"q047","query":"How do I update my billing address?","expected":"small"}
+{"id":"q048","query":"How would you make a recommendation system resilient to sparse and delayed user feedback?","expected":"large"}
+{"id":"q049","query":"What is an index used for in a database?","expected":"small"}
+{"id":"q050","query":"Design a disaster-recovery plan with defined RPO and RTO for a critical service.","expected":"large"}
