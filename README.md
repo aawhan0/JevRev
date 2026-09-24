@@ -88,6 +88,18 @@ BENCHMARK_STRATEGIES=jev,small,large,keyword python run_benchmark.py
 
 The runner reports **routing accuracy**, measured latency, estimated cost from reported token usage, and the number of `large` routes.
 
+## Benchmark Results
+
+The current 50-query benchmark produced the following results:
+
+| Strategy | Route agreement | Mean latency | Total cost | Large routes |
+|---|---:|---:|---:|---:|
+| Keyword | 84% | 0 ms | $0 | 14/50 |
+| Jev | 94% | ~510 ms | $0.000708 | 19/50 |
+| GPT-5-mini | 100% | ~2.73 s | $0.013593 | 22/50 |
+
+> **Note:** Route agreement is measured against hand-designed benchmark annotations, not objective ground truth. The GPT-5.5 baseline was not run because direct OpenAI API access required paid credits.
+
 ## Metrics
 
 - route accuracy against the fixed benchmark labels
