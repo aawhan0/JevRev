@@ -1,0 +1,5 @@
+{"id":"q001","query":"How do I reset my account password?","expected":"small"}
+{"id":"q002","query":"Explain the trade-offs between event-driven and request-response architecture.","expected":"large"}
+{"id":"q003","query":"My login is not working. What should I check?","expected":"small"}
+{"id":"q004","query":"How would you design a reliable distributed job scheduler?","expected":"large"}
+{"id":"q005","query":"Where can I update my account email?","expected":"small"}
