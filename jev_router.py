@@ -8,6 +8,7 @@ class JevDecision:
     route: str
     confidence: float
     probabilities: dict[str, float]
+    usage: dict[str, int]
     raw: dict
 
 
@@ -38,6 +39,10 @@ class JevRouter:
             probabilities={
                 key: float(value)
                 for key, value in answer["probabilities"].items()
+            },
+            usage={
+                "input_tokens": int(result["usage"]["input_tokens"]),
+                "output_tokens": int(result["usage"]["output_tokens"]),
             },
             raw=answer,
         )
