@@ -48,7 +48,7 @@ def run_jev(rows):
         started = time.perf_counter()
         decision = router.decide(row["query"])
         latency_ms = (time.perf_counter() - started) * 1000
-        usage = decision.raw.get("_usage", {})
+        usage = decision.usage
         input_tokens = int(usage.get("input_tokens", 0))
         cost_usd = input_tokens / 1_000_000 * price
         results.append(
