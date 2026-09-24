@@ -1,4 +1,6 @@
-# JevRev
+<p align="center">
+  <img src="./assets/jevrev-logo.png" width="260" alt="JevRev" />
+</p>
 
 <p align="center"><strong>Benchmarking lightweight AI routing strategies for cost-aware model selection.</strong></p>
 
