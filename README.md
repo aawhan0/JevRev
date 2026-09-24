@@ -1,5 +1,20 @@
 # JevRev
 
+<p align="center"><strong>Benchmarking lightweight AI routing strategies for cost-aware model selection.</strong></p>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/aawhanvyas/">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://github.com/aawhan0/JevRev">
+    <img src="https://img.shields.io/github/stars/aawhan0/JevRev?style=flat-square" alt="GitHub stars" />
+  </a>
+  <a href="https://github.com/aawhan0/JevRev">
+    <img src="https://img.shields.io/github/last-commit/aawhan0/JevRev?style=flat-square" alt="Last commit" />
+  </a>
+  <img src="https://img.shields.io/github/license/aawhan0/JevRev?style=flat-square" alt="MIT License" />
+</p>
+
 JevRev is a small research project for benchmarking **Jev-based AI routing** against deterministic and LLM-based approaches.
 
 ## Goal
