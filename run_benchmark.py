@@ -46,7 +46,6 @@ def run_jev(rows):
 
     client = JevClient()
     router = JevRouter(client)
-    price = _float_env("JEV_INPUT_PRICE_PER_MTOK", 0.0)
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     result_path = RESULTS_DIR / "jev.json"
@@ -107,7 +106,14 @@ def run_jev(rows):
             )
         )
 
-        cost_usd = input_tokens / 1_000_000 * price
+        output_tokens = int(
+            decision.usage.get(
+                "outputTokens",
+                decision.usage.get("output_tokens", 0),
+            )
+        )
+
+        cost_usd = decision.market_cost_usd
 
         result = {
             "id": row["id"],
@@ -117,12 +123,7 @@ def run_jev(rows):
             "probabilities": decision.probabilities,
             "latency_ms": latency_ms,
             "input_tokens": input_tokens,
-            "output_tokens": int(
-                decision.usage.get(
-                    "outputTokens",
-                    decision.usage.get("output_tokens", 0),
-                )
-            ),
+            "output_tokens": output_tokens,
             "cost_usd": cost_usd,
         }
 
@@ -147,7 +148,8 @@ def run_jev(rows):
             f"[Jev] {index}/{len(rows)} "
             f"{row['id']} -> {decision.route} "
             f"confidence={decision.confidence:.2f} "
-            f"({latency_ms:.0f} ms)"
+            f"({latency_ms:.0f} ms, "
+            f"${cost_usd:.8f})"
         )
 
         if index < len(rows):
@@ -174,22 +176,99 @@ def run_keyword(rows):
 
 
 def run_llm(rows, model: str):
-    provider = build_llm_provider(model)
-    results = []
-    for row in rows:
-        response = provider.generate(row["query"])
-        results.append(
-            {
-                "id": row["id"],
-                "expected": row["expected"],
-                "route": response.text,
-                "confidence": None,
-                "latency_ms": response.latency_ms,
-                "cost_usd": response.cost_usd,
-            }
-        )
-    return results
+    import urllib.error
 
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
+    strategy = "small" if model == os.getenv("SMALL_MODEL") else "large"
+    result_path = RESULTS_DIR / f"{strategy}.json"
+
+    existing = {}
+
+    if result_path.exists():
+        try:
+            saved = json.loads(result_path.read_text())
+            existing = {
+                item["id"]: item
+                for item in saved.get("results", [])
+                if "id" in item
+            }
+            print(
+                f"[{strategy}] Resuming with "
+                f"{len(existing)} saved results."
+            )
+        except (json.JSONDecodeError, KeyError, TypeError):
+            print(
+                f"[{strategy}] Existing results file is invalid; "
+                "starting fresh."
+            )
+
+    provider = build_llm_provider(model)
+    results = list(existing.values())
+
+    for index, row in enumerate(rows, start=1):
+        if row["id"] in existing:
+            print(
+                f"[{strategy}] {index}/{len(rows)} "
+                f"{row['id']} -> already saved"
+            )
+            continue
+
+        max_retries = 6
+        response = None
+
+        for attempt in range(max_retries):
+            try:
+                response = provider.generate(row["query"])
+                break
+
+            except urllib.error.HTTPError as exc:
+                if exc.code != 429 or attempt == max_retries - 1:
+                    raise
+
+                wait_seconds = 10 * (2 ** attempt)
+
+                print(
+                    f"[{strategy}] 429 on {row['id']} "
+                    f"(attempt {attempt + 1}/{max_retries}), "
+                    f"waiting {wait_seconds}s..."
+                )
+
+                time.sleep(wait_seconds)
+
+        result = {
+            "id": row["id"],
+            "expected": row["expected"],
+            "route": response.text,
+            "confidence": None,
+            "latency_ms": response.latency_ms,
+            "cost_usd": response.cost_usd,
+        }
+
+        results.append(result)
+        existing[row["id"]] = result
+
+        result_path.write_text(
+            json.dumps(
+                {
+                    "strategy": strategy,
+                    "model": model,
+                    "dataset": str(DATA),
+                    "results": results,
+                    "summary": summarize(strategy, results),
+                },
+                indent=2,
+            )
+        )
+
+        print(
+            f"[{strategy}] {index}/{len(rows)} "
+            f"{row['id']} -> {response.text} "
+            f"({response.latency_ms:.0f} ms, "
+            f"${response.cost_usd:.8f})"
+        )
+
+    return results
 
 def summarize(strategy, results):
     total = len(results)
@@ -205,7 +284,6 @@ def summarize(strategy, results):
         "total_cost_usd": sum(r["cost_usd"] for r in results),
         "large_calls": sum(r["route"] == "large" for r in results),
     }
-
 
 def main():
     rows = load_queries()
@@ -233,3 +311,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+

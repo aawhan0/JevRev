@@ -8,41 +8,41 @@
       "route": "small",
       "confidence": 1.0,
       "probabilities": {
-        "large": 0.0,
-        "small": 1.0
+        "small": 1.0,
+        "large": 0.0
       },
-      "latency_ms": 2527.910699995118,
+      "latency_ms": 1210.7199000020046,
       "input_tokens": 334,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4028e-05
     },
     {
       "id": "q002",
       "expected": "large",
       "route": "small",
-      "confidence": 0.56,
+      "confidence": 0.53,
       "probabilities": {
-        "small": 0.78,
-        "large": 0.22
+        "large": 0.24,
+        "small": 0.76
       },
-      "latency_ms": 1599.0759000123944,
+      "latency_ms": 853.225900005782,
       "input_tokens": 339,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4238e-05
     },
     {
       "id": "q003",
       "expected": "small",
       "route": "small",
-      "confidence": 0.98,
+      "confidence": 0.99,
       "probabilities": {
-        "small": 0.99,
-        "large": 0.01
+        "large": 0.01,
+        "small": 0.99
       },
-      "latency_ms": 576.2866000004578,
+      "latency_ms": 488.85389999486506,
       "input_tokens": 337,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4154e-05
     },
     {
       "id": "q004",
@@ -53,10 +53,10 @@
         "small": 0.0,
         "large": 1.0
       },
-      "latency_ms": 518.7106000084896,
+      "latency_ms": 416.82090000540484,
       "input_tokens": 336,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4112e-05
     },
     {
       "id": "q005",
@@ -64,13 +64,13 @@
       "route": "small",
       "confidence": 1.0,
       "probabilities": {
-        "small": 1.0,
-        "large": 0.0
+        "large": 0.0,
+        "small": 1.0
       },
-      "latency_ms": 912.2377000021515,
+      "latency_ms": 455.5961000005482,
       "input_tokens": 334,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4028e-05
     },
     {
       "id": "q006",
@@ -81,10 +81,10 @@
         "small": 1.0,
         "large": 0.0
       },
-      "latency_ms": 811.3124999945285,
+      "latency_ms": 494.6614999935264,
       "input_tokens": 337,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4154e-05
     },
     {
       "id": "q007",
@@ -92,13 +92,13 @@
       "route": "large",
       "confidence": 0.99,
       "probabilities": {
-        "small": 0.01,
-        "large": 0.99
+        "large": 0.99,
+        "small": 0.01
       },
-      "latency_ms": 885.5638999957591,
+      "latency_ms": 463.21750000061,
       "input_tokens": 339,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4238e-05
     },
     {
       "id": "q008",
@@ -109,38 +109,38 @@
         "small": 1.0,
         "large": 0.0
       },
-      "latency_ms": 940.5982000025688,
+      "latency_ms": 459.1851000004681,
       "input_tokens": 334,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4028e-05
     },
     {
       "id": "q009",
       "expected": "large",
       "route": "large",
-      "confidence": 0.21,
+      "confidence": 0.24,
       "probabilities": {
-        "small": 0.4,
-        "large": 0.6
+        "large": 0.62,
+        "small": 0.38
       },
-      "latency_ms": 669.9052000039956,
+      "latency_ms": 422.35610001080204,
       "input_tokens": 339,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4238e-05
     },
     {
       "id": "q010",
       "expected": "small",
       "route": "small",
-      "confidence": 0.98,
+      "confidence": 0.97,
       "probabilities": {
         "large": 0.01,
         "small": 0.99
       },
-      "latency_ms": 739.219499999308,
+      "latency_ms": 420.5543999996735,
       "input_tokens": 334,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4028e-05
     },
     {
       "id": "q011",
@@ -148,13 +148,13 @@
       "route": "small",
       "confidence": 1.0,
       "probabilities": {
-        "small": 1.0,
-        "large": 0.0
+        "large": 0.0,
+        "small": 1.0
       },
-      "latency_ms": 570.1192999986233,
+      "latency_ms": 659.2036999936681,
       "input_tokens": 335,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.407e-05
     },
     {
       "id": "q012",
@@ -162,13 +162,13 @@
       "route": "large",
       "confidence": 0.71,
       "probabilities": {
-        "small": 0.14,
-        "large": 0.86
+        "small": 0.15,
+        "large": 0.85
       },
-      "latency_ms": 511.95539999753237,
+      "latency_ms": 400.83319999394007,
       "input_tokens": 339,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4238e-05
     },
     {
       "id": "q013",
@@ -176,27 +176,27 @@
       "route": "small",
       "confidence": 1.0,
       "probabilities": {
-        "large": 0.0,
-        "small": 1.0
+        "small": 1.0,
+        "large": 0.0
       },
-      "latency_ms": 1289.4121999997878,
+      "latency_ms": 473.95630000391975,
       "input_tokens": 334,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4028e-05
     },
     {
       "id": "q014",
       "expected": "large",
       "route": "small",
-      "confidence": 0.68,
+      "confidence": 0.66,
       "probabilities": {
-        "small": 0.84,
-        "large": 0.16
+        "small": 0.83,
+        "large": 0.17
       },
-      "latency_ms": 633.520999996108,
+      "latency_ms": 505.6214999931399,
       "input_tokens": 338,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4196e-05
     },
     {
       "id": "q015",
@@ -207,10 +207,10 @@
         "small": 1.0,
         "large": 0.0
       },
-      "latency_ms": 712.1225000009872,
+      "latency_ms": 434.1483000025619,
       "input_tokens": 334,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4028e-05
     },
     {
       "id": "q016",
@@ -218,13 +218,13 @@
       "route": "small",
       "confidence": 1.0,
       "probabilities": {
-        "small": 1.0,
-        "large": 0.0
+        "large": 0.0,
+        "small": 1.0
       },
-      "latency_ms": 764.8889000120107,
+      "latency_ms": 437.63069999113213,
       "input_tokens": 335,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.407e-05
     },
     {
       "id": "q017",
@@ -232,13 +232,13 @@
       "route": "large",
       "confidence": 0.99,
       "probabilities": {
-        "small": 0.0,
-        "large": 1.0
+        "large": 1.0,
+        "small": 0.0
       },
-      "latency_ms": 1173.492999994778,
+      "latency_ms": 409.2120999994222,
       "input_tokens": 340,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.428e-05
     },
     {
       "id": "q018",
@@ -246,27 +246,27 @@
       "route": "small",
       "confidence": 1.0,
       "probabilities": {
-        "large": 0.0,
-        "small": 1.0
+        "small": 1.0,
+        "large": 0.0
       },
-      "latency_ms": 539.6834999992279,
+      "latency_ms": 452.6268000045093,
       "input_tokens": 335,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.407e-05
     },
     {
       "id": "q019",
       "expected": "large",
       "route": "large",
-      "confidence": 0.76,
+      "confidence": 0.69,
       "probabilities": {
-        "small": 0.12,
-        "large": 0.88
+        "small": 0.15,
+        "large": 0.85
       },
-      "latency_ms": 527.7635999955237,
+      "latency_ms": 438.2947999984026,
       "input_tokens": 338,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4196e-05
     },
     {
       "id": "q020",
@@ -277,10 +277,10 @@
         "small": 1.0,
         "large": 0.0
       },
-      "latency_ms": 1146.8824000039604,
+      "latency_ms": 1248.5262000118382,
       "input_tokens": 334,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4028e-05
     },
     {
       "id": "q021",
@@ -288,27 +288,27 @@
       "route": "small",
       "confidence": 1.0,
       "probabilities": {
-        "small": 1.0,
-        "large": 0.0
+        "large": 0.0,
+        "small": 1.0
       },
-      "latency_ms": 1566.5855999977794,
+      "latency_ms": 493.0634999909671,
       "input_tokens": 336,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4112e-05
     },
     {
       "id": "q022",
       "expected": "large",
       "route": "large",
-      "confidence": 0.97,
+      "confidence": 0.96,
       "probabilities": {
         "small": 0.02,
         "large": 0.98
       },
-      "latency_ms": 625.6550999969477,
+      "latency_ms": 447.47040000220295,
       "input_tokens": 341,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4322e-05
     },
     {
       "id": "q023",
@@ -316,13 +316,13 @@
       "route": "small",
       "confidence": 1.0,
       "probabilities": {
-        "small": 1.0,
-        "large": 0.0
+        "large": 0.0,
+        "small": 1.0
       },
-      "latency_ms": 738.552199996775,
+      "latency_ms": 416.25460000068415,
       "input_tokens": 334,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4028e-05
     },
     {
       "id": "q024",
@@ -330,13 +330,13 @@
       "route": "large",
       "confidence": 0.8,
       "probabilities": {
-        "small": 0.1,
-        "large": 0.9
+        "large": 0.9,
+        "small": 0.1
       },
-      "latency_ms": 1009.0861000062432,
+      "latency_ms": 989.631599994027,
       "input_tokens": 341,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4322e-05
     },
     {
       "id": "q025",
@@ -347,10 +347,10 @@
         "small": 1.0,
         "large": 0.0
       },
-      "latency_ms": 960.7911000057356,
+      "latency_ms": 453.93450000847224,
       "input_tokens": 335,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.407e-05
     },
     {
       "id": "q026",
@@ -361,24 +361,24 @@
         "small": 0.99,
         "large": 0.01
       },
-      "latency_ms": 2027.5933999946574,
+      "latency_ms": 462.63519999047276,
       "input_tokens": 333,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.3986e-05
     },
     {
       "id": "q027",
       "expected": "large",
       "route": "large",
-      "confidence": 0.98,
+      "confidence": 0.97,
       "probabilities": {
         "large": 0.99,
         "small": 0.01
       },
-      "latency_ms": 884.4389000005322,
+      "latency_ms": 430.3875000041444,
       "input_tokens": 342,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4364e-05
     },
     {
       "id": "q028",
@@ -386,27 +386,27 @@
       "route": "small",
       "confidence": 1.0,
       "probabilities": {
-        "large": 0.0,
-        "small": 1.0
+        "small": 1.0,
+        "large": 0.0
       },
-      "latency_ms": 614.2437999951653,
+      "latency_ms": 396.7321000091033,
       "input_tokens": 334,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4028e-05
     },
     {
       "id": "q029",
       "expected": "large",
       "route": "large",
-      "confidence": 0.98,
+      "confidence": 0.99,
       "probabilities": {
         "small": 0.01,
         "large": 0.99
       },
-      "latency_ms": 695.4048999905353,
+      "latency_ms": 459.95330000005197,
       "input_tokens": 341,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4322e-05
     },
     {
       "id": "q030",
@@ -414,13 +414,13 @@
       "route": "small",
       "confidence": 1.0,
       "probabilities": {
-        "small": 1.0,
-        "large": 0.0
+        "large": 0.0,
+        "small": 1.0
       },
-      "latency_ms": 680.7380000100238,
+      "latency_ms": 443.0216000037035,
       "input_tokens": 338,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4196e-05
     },
     {
       "id": "q031",
@@ -428,13 +428,13 @@
       "route": "small",
       "confidence": 0.97,
       "probabilities": {
-        "large": 0.02,
-        "small": 0.98
+        "small": 0.99,
+        "large": 0.01
       },
-      "latency_ms": 916.3797999935923,
+      "latency_ms": 605.6818000070052,
       "input_tokens": 334,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4028e-05
     },
     {
       "id": "q032",
@@ -442,13 +442,13 @@
       "route": "large",
       "confidence": 0.99,
       "probabilities": {
-        "large": 1.0,
-        "small": 0.0
+        "small": 0.0,
+        "large": 1.0
       },
-      "latency_ms": 2171.9136999890907,
+      "latency_ms": 399.28700000746176,
       "input_tokens": 344,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4448e-05
     },
     {
       "id": "q033",
@@ -459,24 +459,24 @@
         "small": 1.0,
         "large": 0.0
       },
-      "latency_ms": 1125.9091000101762,
+      "latency_ms": 479.11019998718984,
       "input_tokens": 339,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4238e-05
     },
     {
       "id": "q034",
       "expected": "large",
       "route": "small",
-      "confidence": 0.59,
+      "confidence": 0.63,
       "probabilities": {
-        "small": 0.8,
-        "large": 0.2
+        "large": 0.19,
+        "small": 0.81
       },
-      "latency_ms": 466.13640000578016,
+      "latency_ms": 449.1632999997819,
       "input_tokens": 342,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4364e-05
     },
     {
       "id": "q035",
@@ -487,24 +487,24 @@
         "small": 1.0,
         "large": 0.0
       },
-      "latency_ms": 1092.0957000053022,
+      "latency_ms": 447.87769998947624,
       "input_tokens": 334,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4028e-05
     },
     {
       "id": "q036",
       "expected": "large",
       "route": "large",
-      "confidence": 0.91,
+      "confidence": 0.93,
       "probabilities": {
-        "small": 0.05,
-        "large": 0.95
+        "small": 0.03,
+        "large": 0.97
       },
-      "latency_ms": 1545.7257000089157,
+      "latency_ms": 414.65760000573937,
       "input_tokens": 340,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.428e-05
     },
     {
       "id": "q037",
@@ -512,27 +512,27 @@
       "route": "small",
       "confidence": 1.0,
       "probabilities": {
-        "small": 1.0,
-        "large": 0.0
+        "large": 0.0,
+        "small": 1.0
       },
-      "latency_ms": 1070.5650000018068,
+      "latency_ms": 546.0218000080204,
       "input_tokens": 334,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4028e-05
     },
     {
       "id": "q038",
       "expected": "large",
       "route": "large",
-      "confidence": 0.27,
+      "confidence": 0.26,
       "probabilities": {
-        "large": 0.64,
-        "small": 0.36
+        "large": 0.63,
+        "small": 0.37
       },
-      "latency_ms": 842.5095999991754,
+      "latency_ms": 462.6257999916561,
       "input_tokens": 341,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4322e-05
     },
     {
       "id": "q039",
@@ -543,24 +543,24 @@
         "small": 1.0,
         "large": 0.0
       },
-      "latency_ms": 3504.1766999929678,
+      "latency_ms": 451.6715999925509,
       "input_tokens": 333,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.3986e-05
     },
     {
       "id": "q040",
       "expected": "large",
       "route": "large",
-      "confidence": 0.83,
+      "confidence": 0.85,
       "probabilities": {
-        "small": 0.09,
-        "large": 0.91
+        "small": 0.07,
+        "large": 0.93
       },
-      "latency_ms": 412.55789999559056,
+      "latency_ms": 463.28429999994114,
       "input_tokens": 339,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4238e-05
     },
     {
       "id": "q041",
@@ -568,55 +568,55 @@
       "route": "small",
       "confidence": 1.0,
       "probabilities": {
-        "small": 1.0,
-        "large": 0.0
+        "large": 0.0,
+        "small": 1.0
       },
-      "latency_ms": 452.35870000033174,
+      "latency_ms": 503.31620000361,
       "input_tokens": 332,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.3944e-05
     },
     {
       "id": "q042",
       "expected": "large",
       "route": "large",
-      "confidence": 0.98,
+      "confidence": 0.99,
       "probabilities": {
-        "small": 0.01,
-        "large": 0.99
+        "large": 0.99,
+        "small": 0.01
       },
-      "latency_ms": 586.1368000041693,
+      "latency_ms": 549.8026999994181,
       "input_tokens": 338,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4196e-05
     },
     {
       "id": "q043",
       "expected": "small",
       "route": "small",
-      "confidence": 0.96,
+      "confidence": 0.95,
       "probabilities": {
-        "small": 0.98,
-        "large": 0.02
+        "large": 0.03,
+        "small": 0.97
       },
-      "latency_ms": 397.3665999947116,
+      "latency_ms": 398.39579998806585,
       "input_tokens": 335,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.407e-05
     },
     {
       "id": "q044",
       "expected": "large",
       "route": "large",
-      "confidence": 0.77,
+      "confidence": 0.72,
       "probabilities": {
-        "large": 0.88,
-        "small": 0.12
+        "large": 0.86,
+        "small": 0.14
       },
-      "latency_ms": 403.5323999996763,
+      "latency_ms": 509.4803999963915,
       "input_tokens": 340,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.428e-05
     },
     {
       "id": "q045",
@@ -627,10 +627,10 @@
         "large": 0.0,
         "small": 1.0
       },
-      "latency_ms": 481.1466999963159,
+      "latency_ms": 436.339499996393,
       "input_tokens": 333,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.3986e-05
     },
     {
       "id": "q046",
@@ -638,13 +638,13 @@
       "route": "large",
       "confidence": 1.0,
       "probabilities": {
-        "small": 0.0,
-        "large": 1.0
+        "large": 1.0,
+        "small": 0.0
       },
-      "latency_ms": 445.7054000085918,
+      "latency_ms": 429.2987999942852,
       "input_tokens": 344,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4448e-05
     },
     {
       "id": "q047",
@@ -655,24 +655,24 @@
         "large": 0.0,
         "small": 1.0
       },
-      "latency_ms": 539.0340000012657,
+      "latency_ms": 413.2335000031162,
       "input_tokens": 334,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4028e-05
     },
     {
       "id": "q048",
       "expected": "large",
       "route": "large",
-      "confidence": 0.93,
+      "confidence": 0.92,
       "probabilities": {
-        "large": 0.97,
-        "small": 0.03
+        "small": 0.04,
+        "large": 0.96
       },
-      "latency_ms": 837.698300005286,
+      "latency_ms": 518.8080999942031,
       "input_tokens": 341,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4322e-05
     },
     {
       "id": "q049",
@@ -683,24 +683,24 @@
         "small": 1.0,
         "large": 0.0
       },
-      "latency_ms": 484.39800000051036,
+      "latency_ms": 418.07310000876896,
       "input_tokens": 336,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.4112e-05
     },
     {
       "id": "q050",
       "expected": "large",
       "route": "large",
-      "confidence": 0.79,
+      "confidence": 0.75,
       "probabilities": {
-        "small": 0.11,
-        "large": 0.89
+        "small": 0.12,
+        "large": 0.88
       },
-      "latency_ms": 404.7926999919582,
+      "latency_ms": 463.2448000047589,
       "input_tokens": 345,
       "output_tokens": 31,
-      "cost_usd": 0.0
+      "cost_usd": 1.449e-05
     }
   ],
   "summary": {
@@ -708,8 +708,8 @@
     "dataset": "benchmarks\\queries.jsonl",
     "total_queries": 50,
     "route_accuracy": 0.94,
-    "mean_latency_ms": 920.6778180002584,
-    "total_cost_usd": 0.0,
+    "mean_latency_ms": 509.95406399975764,
+    "total_cost_usd": 0.000708036,
     "large_calls": 19
   }
 }

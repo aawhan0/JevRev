@@ -70,6 +70,7 @@ class OpenAICompatibleProvider:
                 {"role": "user", "content": prompt},
             ],
         }
+
         request = Request(
             f"{self.endpoint}/chat/completions",
             data=json.dumps(body).encode(),
@@ -81,16 +82,30 @@ class OpenAICompatibleProvider:
         )
 
         started = time.perf_counter()
+
         with urlopen(request, timeout=60) as response:
             payload = json.loads(response.read())
+
         latency_ms = (time.perf_counter() - started) * 1000
 
         text = payload["choices"][0]["message"]["content"].strip().lower()
+
         usage = payload.get("usage", {})
         input_tokens = int(usage.get("prompt_tokens", 0))
         output_tokens = int(usage.get("completion_tokens", 0))
-        cost_usd = (
-            input_tokens / 1_000_000 * self.input_price_per_mtok
-            + output_tokens / 1_000_000 * self.output_price_per_mtok
+
+        gateway_cost = usage.get("cost")
+
+        if gateway_cost is not None:
+            cost_usd = float(gateway_cost)
+        else:
+            cost_usd = (
+                input_tokens / 1_000_000 * self.input_price_per_mtok
+                + output_tokens / 1_000_000 * self.output_price_per_mtok
+            )
+
+        return ModelResponse(
+            text=text,
+            latency_ms=latency_ms,
+            cost_usd=cost_usd,
         )
-        return ModelResponse(text=text, latency_ms=latency_ms, cost_usd=cost_usd)

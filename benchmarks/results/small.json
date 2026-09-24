@@ -1,0 +1,416 @@
+{
+  "strategy": "small",
+  "model": "openai/gpt-5-mini",
+  "dataset": "benchmarks\\queries.jsonl",
+  "results": [
+    {
+      "id": "q001",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 3748.8468999945326,
+      "cost_usd": 0.0002045
+    },
+    {
+      "id": "q002",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 3038.3545000076992,
+      "cost_usd": 0.0004135
+    },
+    {
+      "id": "q003",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2718.6245000048075,
+      "cost_usd": 0.00027125
+    },
+    {
+      "id": "q004",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 2123.7242000061087,
+      "cost_usd": 0.000183
+    },
+    {
+      "id": "q005",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2180.1277000049595,
+      "cost_usd": 0.0002245
+    },
+    {
+      "id": "q006",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2752.5728000036906,
+      "cost_usd": 0.00019925
+    },
+    {
+      "id": "q007",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 3141.719800012652,
+      "cost_usd": 0.00034175
+    },
+    {
+      "id": "q008",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 1887.0630999881541,
+      "cost_usd": 0.0001925
+    },
+    {
+      "id": "q009",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 3156.8274999881396,
+      "cost_usd": 0.0003735
+    },
+    {
+      "id": "q010",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2511.8032000027597,
+      "cost_usd": 0.0002265
+    },
+    {
+      "id": "q011",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2348.0431999923894,
+      "cost_usd": 0.00024625
+    },
+    {
+      "id": "q012",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 3368.6092999996617,
+      "cost_usd": 0.0003035
+    },
+    {
+      "id": "q013",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2170.537799989688,
+      "cost_usd": 0.0001705
+    },
+    {
+      "id": "q014",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 2601.069899988943,
+      "cost_usd": 0.00027125
+    },
+    {
+      "id": "q015",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 1995.4784000001382,
+      "cost_usd": 0.0001745
+    },
+    {
+      "id": "q016",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2783.401699998649,
+      "cost_usd": 0.00021875
+    },
+    {
+      "id": "q017",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 2937.6966999989236,
+      "cost_usd": 0.000336
+    },
+    {
+      "id": "q018",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2598.1046999950195,
+      "cost_usd": 0.00022075
+    },
+    {
+      "id": "q019",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 4246.728500002064,
+      "cost_usd": 0.0002975
+    },
+    {
+      "id": "q020",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2249.3017000088003,
+      "cost_usd": 0.0001965
+    },
+    {
+      "id": "q021",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2391.404499998316,
+      "cost_usd": 0.000139
+    },
+    {
+      "id": "q022",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 3564.2844999965746,
+      "cost_usd": 0.00031975
+    },
+    {
+      "id": "q023",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 1658.0563000024995,
+      "cost_usd": 0.0001685
+    },
+    {
+      "id": "q024",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 2656.0242000123253,
+      "cost_usd": 0.0002875
+    },
+    {
+      "id": "q025",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2007.3532999958843,
+      "cost_usd": 0.00018875
+    },
+    {
+      "id": "q026",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 1728.525400001672,
+      "cost_usd": 0.00015825
+    },
+    {
+      "id": "q027",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 1964.2945999949006,
+      "cost_usd": 0.0002965
+    },
+    {
+      "id": "q028",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 1772.8504999977304,
+      "cost_usd": 0.0001805
+    },
+    {
+      "id": "q029",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 3212.8210999944713,
+      "cost_usd": 0.00053225
+    },
+    {
+      "id": "q030",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2132.456599996658,
+      "cost_usd": 0.000255
+    },
+    {
+      "id": "q031",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 4424.924999999348,
+      "cost_usd": 0.0002465
+    },
+    {
+      "id": "q032",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 4014.0115000103833,
+      "cost_usd": 0.00033
+    },
+    {
+      "id": "q033",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2343.2469999970635,
+      "cost_usd": 0.00025175
+    },
+    {
+      "id": "q034",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 4224.13790000428,
+      "cost_usd": 0.0005425
+    },
+    {
+      "id": "q035",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2127.103199993144,
+      "cost_usd": 0.0001885
+    },
+    {
+      "id": "q036",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 3850.243600012618,
+      "cost_usd": 0.00043575
+    },
+    {
+      "id": "q037",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2393.625199998496,
+      "cost_usd": 0.0001965
+    },
+    {
+      "id": "q038",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 3446.830400003819,
+      "cost_usd": 0.000372
+    },
+    {
+      "id": "q039",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 1947.6806000020588,
+      "cost_usd": 0.00020025
+    },
+    {
+      "id": "q040",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 2618.3092999999644,
+      "cost_usd": 0.0003155
+    },
+    {
+      "id": "q041",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2486.0418000025675,
+      "cost_usd": 0.000162
+    },
+    {
+      "id": "q042",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 3119.124099990586,
+      "cost_usd": 0.0004895
+    },
+    {
+      "id": "q043",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2763.092699999106,
+      "cost_usd": 0.00023475
+    },
+    {
+      "id": "q044",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 3182.8208999941126,
+      "cost_usd": 0.000352
+    },
+    {
+      "id": "q045",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 1693.6840999987908,
+      "cost_usd": 0.00014025
+    },
+    {
+      "id": "q046",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 2685.385300006601,
+      "cost_usd": 0.00023875
+    },
+    {
+      "id": "q047",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2969.167400005972,
+      "cost_usd": 0.0001965
+    },
+    {
+      "id": "q048",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 4078.7593999993987,
+      "cost_usd": 0.00066425
+    },
+    {
+      "id": "q049",
+      "expected": "small",
+      "route": "small",
+      "confidence": null,
+      "latency_ms": 2494.6877999900607,
+      "cost_usd": 0.000223
+    },
+    {
+      "id": "q050",
+      "expected": "large",
+      "route": "large",
+      "confidence": null,
+      "latency_ms": 2146.4254000020446,
+      "cost_usd": 0.000221
+    }
+  ],
+  "summary": {
+    "strategy": "small",
+    "dataset": "benchmarks\\queries.jsonl",
+    "total_queries": 50,
+    "route_accuracy": 1.0,
+    "mean_latency_ms": 2733.1201939997845,
+    "total_cost_usd": 0.013593000000000001,
+    "large_calls": 22
+  }
+}

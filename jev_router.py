@@ -9,6 +9,7 @@ class JevDecision:
     confidence: float | None
     probabilities: dict[str, float]
     usage: dict[str, int]
+    market_cost_usd: float
     raw: dict
 
 
@@ -32,8 +33,19 @@ class JevRouter:
                 }
             },
         )
+
         answer = result["answers"]["route"]
         confidence = answer.get("confidence")
+
+        gateway_metadata = (
+            result.get("providerMetadata", {})
+            .get("gateway", {})
+        )
+
+        market_cost = float(
+            gateway_metadata.get("marketCost", 0.0)
+        )
+
         return JevDecision(
             route=answer["choice"],
             confidence=float(confidence) if confidence is not None else None,
@@ -46,5 +58,6 @@ class JevRouter:
                 for key, value in result.get("usage", {}).items()
                 if isinstance(value, (int, float))
             },
+            market_cost_usd=market_cost,
             raw=answer,
         )
