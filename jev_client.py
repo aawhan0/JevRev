@@ -15,6 +15,7 @@ class JevClient:
     ):
         self.api_key = api_key or os.getenv("AI_GATEWAY_API_KEY")
         self.model = model or os.getenv("JEV_MODEL", "typesafe-ai/jev")
+
         if not self.api_key:
             raise ValueError("AI_GATEWAY_API_KEY is required")
 
