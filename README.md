@@ -27,6 +27,83 @@ A deterministic keyword router is also available as a non-LLM baseline.
 - [ ] End-to-end execution-quality benchmark
 - [ ] Final benchmark report
 
+## Architecture
+
+```mermaid
+flowchart TD
+    Q[Benchmark Query] --> R{Routing Strategy}
+
+    R -->|keyword| K[Deterministic Keyword Router]
+    R -->|jev| J[JevRouter]
+    R -->|small| S[LLM Router]
+    R -->|large| L[LLM Router]
+
+    J --> JC[JevClient]
+    JC --> G[Vercel AI Gateway]
+    G --> JV[Jev Decision]
+
+    S --> P[Provider Adapter]
+    L --> P
+    P --> G2[OpenAI-Compatible Gateway]
+
+    K --> D[Route Decision]
+    JV --> D
+    S --> D
+    L --> D
+
+    D --> M[Benchmark Metrics]
+    M --> O[Persisted JSON Results]
+```
+
+## Benchmark Flow
+
+```mermaid
+flowchart LR
+    A[queries.jsonl<br/>50 queries] --> B[Benchmark Runner]
+    B --> C1[Jev]
+    B --> C2[GPT-5-mini]
+    B --> C3[Keyword]
+
+    C1 --> D[Route Decision]
+    C2 --> D
+    C3 --> D
+
+    D --> E[Compare with<br/>hand-designed label]
+    E --> F[Accuracy]
+    D --> G[Latency]
+    D --> H[Cost]
+    D --> I[Large-route count]
+
+    F --> J[benchmarks/results/*.json]
+    G --> J
+    H --> J
+    I --> J
+```
+
+## Routing Decision
+
+```mermaid
+sequenceDiagram
+    participant Q as Query
+    participant R as Router
+    participant J as Jev
+    participant M as Model Path
+    participant X as Metrics
+
+    Q->>R: classify request
+    alt Jev strategy
+        R->>J: evaluate route
+        J-->>R: small / large + confidence
+    else LLM strategy
+        R->>M: classify with LLM
+        M-->>R: small / large
+    else Keyword strategy
+        R->>R: apply keyword rules
+    end
+    R->>X: record route, latency, cost
+    X->>X: compare with annotation
+```
+
 ## Run
 
 Copy `.env.example` and set the credentials/configuration locally. Never commit API keys.
