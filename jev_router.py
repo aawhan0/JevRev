@@ -6,7 +6,7 @@ from jev_client import JevClient
 @dataclass(frozen=True)
 class JevDecision:
     route: str
-    confidence: float
+    confidence: float | None
     probabilities: dict[str, float]
     usage: dict[str, int]
     raw: dict
@@ -33,16 +33,18 @@ class JevRouter:
             },
         )
         answer = result["answers"]["route"]
+        confidence = answer.get("confidence")
         return JevDecision(
             route=answer["choice"],
-            confidence=float(answer["confidence"]),
+            confidence=float(confidence) if confidence is not None else None,
             probabilities={
                 key: float(value)
-                for key, value in answer["probabilities"].items()
+                for key, value in answer.get("probabilities", {}).items()
             },
             usage={
-                "input_tokens": int(result["usage"]["input_tokens"]),
-                "output_tokens": int(result["usage"]["output_tokens"]),
+                key: int(value)
+                for key, value in result.get("usage", {}).items()
+                if isinstance(value, (int, float))
             },
             raw=answer,
         )
