@@ -7,6 +7,7 @@ from jev_client import JevClient
 class JevDecision:
     route: str
     confidence: float
+    probabilities: dict[str, float]
     raw: dict
 
 
@@ -34,5 +35,9 @@ class JevRouter:
         return JevDecision(
             route=answer["choice"],
             confidence=float(answer["confidence"]),
+            probabilities={
+                key: float(value)
+                for key, value in answer["probabilities"].items()
+            },
             raw=answer,
         )
