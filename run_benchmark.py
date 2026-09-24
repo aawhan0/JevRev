@@ -20,11 +20,13 @@ def _float_env(name: str, default: float | None = None) -> float:
     if value is None:
         if default is None:
             raise SystemExit(f"Set {name} before running this benchmark.")
-        return default
+        return float(default)
     return float(value)
 
 
 def build_llm_provider(model: str):
+    if not model:
+        raise SystemExit("Set the requested LLM model environment variable.")
     api_key = os.getenv("LLM_API_KEY")
     base_url = os.getenv("LLM_API_BASE_URL")
     if not api_key or not base_url:
@@ -41,15 +43,14 @@ def build_llm_provider(model: str):
 def run_jev(rows):
     client = JevClient()
     router = JevRouter(client)
-    price = _float_env("TYPESAFE_INPUT_PRICE_PER_MTOK", 0.042)
+    price = _float_env("JEV_INPUT_PRICE_PER_MTOK", 0.0)
     results = []
 
     for row in rows:
         started = time.perf_counter()
         decision = router.decide(row["query"])
         latency_ms = (time.perf_counter() - started) * 1000
-        usage = decision.usage
-        input_tokens = int(usage.get("input_tokens", 0))
+        input_tokens = int(decision.usage.get("input_tokens", 0))
         cost_usd = input_tokens / 1_000_000 * price
         results.append(
             {
@@ -66,17 +67,20 @@ def run_jev(rows):
 
 def run_keyword(rows):
     router = KeywordRouter()
-    return [
-        {
-            "id": row["id"],
-            "expected": row["expected"],
-            "route": router.decide(row["query"]).route,
-            "confidence": router.decide(row["query"]).confidence,
-            "latency_ms": 0.0,
-            "cost_usd": 0.0,
-        }
-        for row in rows
-    ]
+    results = []
+    for row in rows:
+        decision = router.decide(row["query"])
+        results.append(
+            {
+                "id": row["id"],
+                "expected": row["expected"],
+                "route": decision.route,
+                "confidence": decision.confidence,
+                "latency_ms": 0.0,
+                "cost_usd": 0.0,
+            }
+        )
+    return results
 
 
 def run_llm(rows, model: str):
@@ -124,7 +128,7 @@ def main():
 
     requested = [
         name.strip()
-        for name in os.getenv("BENCHMARK_STRATEGIES", "jev,small,large").split(",")
+        for name in os.getenv("BENCHMARK_STRATEGIES", "jev").split(",")
         if name.strip()
     ]
 
@@ -132,8 +136,6 @@ def main():
     for name in requested:
         if name not in strategies:
             raise SystemExit(f"Unknown strategy: {name}")
-        if name in {"small", "large"} and not strategies[name]:
-            raise SystemExit(f"Missing configuration for {name}")
         summaries.append(summarize(name, strategies[name]()))
 
     print(json.dumps(summaries, indent=2))
