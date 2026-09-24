@@ -1,13 +1,21 @@
 {
-  "description": "Schema for reproducible JevRev benchmark results.",
-  "required": ["strategy", "dataset", "accuracy", "mean_latency_ms", "total_cost_usd"],
+  "description": "Schema for reproducible JevRev routing benchmark summaries.",
+  "required": [
+    "strategy",
+    "dataset",
+    "total_queries",
+    "route_accuracy",
+    "mean_latency_ms",
+    "total_cost_usd",
+    "large_calls"
+  ],
   "properties": {
     "strategy": {"type": "string"},
     "dataset": {"type": "string"},
-    "accuracy": {"type": "number"},
+    "total_queries": {"type": "integer"},
+    "route_accuracy": {"type": "number"},
     "mean_latency_ms": {"type": "number"},
     "total_cost_usd": {"type": "number"},
-    "large_calls": {"type": "integer"},
-    "total_calls": {"type": "integer"}
+    "large_calls": {"type": "integer"}
   }
 }
